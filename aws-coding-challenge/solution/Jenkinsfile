@@ -16,7 +16,7 @@ pipeline {
 
         stage('Checkout') {
             steps {
-                git(branch: 'main', credentialsId: 'cns_github_private', url: 'git@github.com:pxchen1992/cns-devops-assessment.git')
+                git(branch: 'main', credentialsId: 'cns_github_private', url: 'git@github.com:pxchen1992/cns.git')
             }
         }
 
