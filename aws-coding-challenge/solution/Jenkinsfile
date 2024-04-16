@@ -22,8 +22,9 @@ pipeline {
 
         stage('Build Docker Image') {
             steps {
-                script {
-                    sh "docker build -t ${DOCKER_IMAGE}:latest ."
+                dir('aws_coding_challenge/solution') {
+                    script {
+                        sh "docker build -t ${DOCKER_IMAGE}:latest ."
                 }
             }
         }
