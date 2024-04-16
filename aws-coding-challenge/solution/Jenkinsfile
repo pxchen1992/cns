@@ -34,7 +34,7 @@ pipeline {
 
         stage('Test') {
             steps {
-                    echo 'npm run test'
+                    echo 'running the test...'
             }
         }
 
