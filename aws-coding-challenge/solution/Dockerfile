@@ -5,7 +5,7 @@ FROM python:3.9
 WORKDIR /app
 
 # Copy the Python script into the container
-COPY current_time.py .
+COPY current_time.py ./
 
 # Install Flask
 RUN pip install flask
