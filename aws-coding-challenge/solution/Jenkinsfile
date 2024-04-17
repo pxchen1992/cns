@@ -25,8 +25,7 @@ pipeline {
                     script {
 			sh "pwd"
 			sh "ls"
-                        sh "docker.build('cns-time-service:latest', '-f aws-coding-challenge/solution/Dockerfile .')
-"
+                        docker.build('cns-time-service:latest', '-f aws-coding-challenge/solution/Dockerfile .')
                 }
           }
 	}
