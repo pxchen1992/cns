@@ -54,7 +54,7 @@ pipeline {
                      echo 'deploying docker image...'
                      sh 'pwd'
                      sh 'ls'
-                     sh 'kubectl apply -f aws-coding-challenge/solution/cns-deployment.yaml'
+                     sh 'kubectl apply --validate=false -f aws-coding-challenge/solution/cns-deployment.yaml'
                      }
                  }
              }
