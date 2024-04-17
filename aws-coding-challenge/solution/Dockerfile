@@ -5,7 +5,7 @@ FROM python:3.9
 WORKDIR /app
 
 # Copy the Python script into the container
-COPY current-time.py .
+COPY current_time.py .
 
 # Install Flask
 RUN pip install flask
@@ -14,4 +14,4 @@ RUN pip install flask
 EXPOSE 80
 
 # Command to run the Flask application
-CMD ["python", "current-time.py"]
+CMD ["python", "current_time.py"]
