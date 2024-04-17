@@ -47,18 +47,17 @@ pipeline {
         }
 }
 
-        // stage('Deploy') {
-        //     steps {
-        //         script {
-        //             withAWS(region:"ap-southeast-2", credentials:"cns_jenkins_aws") {
-        //             echo 'deploying docker image...'
-        //             sh 'pwd'
-        //             sh 'ls'
-        //             sh 'envsubst < deployment.yaml | kubectl apply -f -'
-        //             sh 'envsubst < service.yaml | kubectl apply -f -'
-        //             }
-        //         }
-        //     }
-        // }
+        stage('Deploy') {
+             steps {
+                 script {
+                     withAWS(region:"ap-southeast-2", credentials:"cns_jenkins_aws") {
+                     echo 'deploying docker image...'
+                     sh 'pwd'
+                     sh 'ls'
+                     sh 'envsubst < deployment.yaml | kubectl apply -f -'
+                     }
+                 }
+             }
+         }
  }
 }
